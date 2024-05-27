@@ -1,0 +1,19 @@
+T(n)= T(n/2)+1, T(1)=1
+T(n/2)= T(n/4)+1
+T(n/4)= T(n/8)+1
+
+Substituting, 
+T(n)= T(n/4) + 2
+    = T(n/8) + 3
+    .
+    .
+    .
+    = T(n/(2^j)) + j
+
+let n/(2^j) = 1 
+=>  n = (2^j)
+=>  log2 n = j
+
+T(n) = T(1) + log2 n
+     = 1 + log2 n
+     = O(logn)
